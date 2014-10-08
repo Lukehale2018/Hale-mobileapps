@@ -1,3 +1,5 @@
 Hello Mr. Michaud
 
 This is a test file created online.
+
+"I am practicing editing files with Git and GitHub"
