@@ -26,7 +26,6 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080000;
-        public static final int ListViewTasks=0x7f080016;
         public static final int action_settings=0x7f080018;
         public static final int buttonAddTask=0x7f08000f;
         public static final int buttonAddToDo=0x7f080017;
@@ -37,6 +36,7 @@ public final class R {
         public static final int checkBoxPriority=0x7f080004;
         public static final int editDueDate=0x7f080007;
         public static final int editTask=0x7f08000b;
+        public static final int listViewTasks=0x7f080016;
         public static final int tableRow1=0x7f080001;
         public static final int tableRow10=0x7f080014;
         public static final int tableRow2=0x7f080003;
