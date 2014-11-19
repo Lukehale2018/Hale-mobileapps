@@ -4,6 +4,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView; 
+import android.media.MediaPlayer;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -21,6 +23,12 @@ import android.view.MenuItem;
 
 
 public class Pedometer extends Activity {
+	
+	// Media player Array
+		private MediaPlayer soundPlayer;
+		
+		private int soundResources[] = {R.raw.rooster};
+		
 	
 	//Display fields for accelerometer
 	private TextView textViewX;
@@ -86,6 +94,7 @@ private int threshold; //point at which we want to trigger a 'step'
         // enable listener
         enableAccelerometerListening();
         
+        soundPlayer = MediaPlayer.create(this, soundResources[0]);
     }
     private void enableAccelerometerListening() {
     	// initialize the sensor manager
@@ -138,6 +147,10 @@ private int threshold; //point at which we want to trigger a 'step'
     public void resetSteps(View v) {
     	numSteps = 0;
     	textViewSteps.setText(String.valueOf(numSteps));
+    	
+    	 // Functions to play sounds onClick
+     		soundPlayer.start();
+    	
     }//end method resetSteps
     
     // the inner class for the seekbarlistener
@@ -179,4 +192,8 @@ private int threshold; //point at which we want to trigger a 'step'
         }
         return super.onOptionsItemSelected(item);
     }
+    
+
+ 	
+ 	
 }
